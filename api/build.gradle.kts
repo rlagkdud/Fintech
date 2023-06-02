@@ -13,4 +13,9 @@ dependencies {
 
     implementation(project(":domain")) // 도메인 모듈
 
+    // test
+    testImplementation("io.mockk:mockk:1.12.0")
+    runtimeOnly("com.h2database:h2")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.+")
+
 }

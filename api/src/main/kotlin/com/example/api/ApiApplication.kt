@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan
 
 @SpringBootApplication
 @EntityScan(basePackages = ["com.example.domain"])
-@ComponentScan(basePackages = ["com.example"])
-@EnableCaching
+//@ComponentScan(basePackages = ["com.example"])
+//@EnableCaching
 class ApiApplication
 
 fun main(args: Array<String>) {
