@@ -12,6 +12,7 @@ dependencies {
     implementation("io.springfox:springfox-boot-starter:3.0.0")
 
     implementation(project(":domain")) // 도메인 모듈
+    implementation(project(":kafka")) // 카프카 모듈
 
     // test
     testImplementation("io.mockk:mockk:1.12.0")
