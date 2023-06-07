@@ -5,6 +5,7 @@ import com.example.api.exception.CustomException
 import com.example.domain.domain.LoanReview
 import com.example.domain.repository.LoanReviewRepository
 import org.springframework.stereotype.Service
+import org.springframework.cache.annotation.Cacheable
 
 @Service
 class LoanReviewServiceImpl(
@@ -19,6 +20,7 @@ class LoanReviewServiceImpl(
         )
     }
 
+    @Cacheable(value = ["REVIEW"], key="#userKey",cacheManager="redisCacheManager")
     override fun getLoanResult(userKey: String) =
             loanReviewRepository.findByUserKey(userKey)
 
